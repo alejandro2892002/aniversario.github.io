@@ -6,7 +6,7 @@ function mostrarSeccion(id) {
 // 🎵 Reproductor
 function reproducirCancion(nombreArchivo) {
   const reproductor = document.getElementById("player");
-  reproductor.src = `audio/${nombreArchivo}`;
+  reproductor.src = `${nombreArchivo}`;
   reproductor.play();
 }
 
