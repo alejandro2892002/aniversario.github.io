@@ -5,9 +5,16 @@ function mostrarSeccion(id) {
 
 // 🎵 Reproductor
 function reproducirCancion(nombreArchivo) {
-  const reproductor = document.getElementById("player");
-  reproductor.src = `${nombreArchivo}`;
-  reproductor.play();
+    const reproductor = document.getElementById("player");
+
+    // Detener cualquier reproducción actual
+    reproductor.pause();
+    reproductor.currentTime = 0;
+
+    // Cambiar la canción y reproducir
+    reproductor.src = nombreArchivo;
+    reproductor.play();
+}
 }
 
 // 🎮 Match-3 Game
