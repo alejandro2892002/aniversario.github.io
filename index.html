@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversario, Arlet</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio id="music" autoplay loop>
+    <source src="audio/cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <header>
+    <h1>Feliz Aniversario, Arlet 💖</h1>
+    <nav>
+      <button onclick="mostrarSeccion('poemas')">Poemas</button>
+      <button onclick="mostrarSeccion('juego')">Juego</button>
+      <button onclick="mostrarSeccion('playlist')">Playlist</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="poemas" class="seccion activa">
+      <div class="libro-poemas">
+        <div class="pagina">
+          <h2>Tu Sonrisa</h2>
+          <p>
+            Tu sonrisa es un hechizo, dulce y brillante,<br>
+            como un amanecer suave y vibrante.<br>
+            Cuando sonríes, mi mundo cambia de color,<br>
+            eres mi alegría, mi más grande flor.
+          </p>
+        </div>
+        <div class="pagina">
+          <h2>Tu Carisma</h2>
+          <p>
+            Tu carisma es un canto que llena de luz,<br>
+            una melodía que mi alma conduce.<br>
+            Con tu esencia, llenas el aire de amor,<br>
+            eres mi calma, mi guía, mi sol.
+          </p>
+        </div>
+        <div class="pagina">
+          <h2>Cabello de Encanto</h2>
+          <p>
+            Tu cabello, sedoso como un río en calma,<br>
+            baila con el viento, me llena el alma.<br>
+            Lo acaricio en sueños, como un tesoro,<br>
+            en cada hebra, mi amor imploro.
+          </p>
+        </div>
+        <div class="pagina">
+          <h2>Ojos de Magia</h2>
+          <p>
+            Tus ojos reflejan un universo profundo,<br>
+            donde me pierdo, feliz, sin segundo.<br>
+            Son estrellas que me guían sin cesar,<br>
+            tus ojos son mi más preciado lugar.
+          </p>
+        </div>
+        <div class="pagina">
+          <h2>Mi Todo</h2>
+          <p>
+            Eres mi musa, mi fuerza, mi verdad,<br>
+            la razón por la que quiero más.<br>
+            Tu piel, tu voz, tu ser tan real,<br>
+            Arlet, mi amor, eres mi eternidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  <!-- JUEGO -->
+<section id="juego" class="seccion">
+  <h2>Juego de Amor 🍬</h2>
+  <canvas id="juegoCanvas" width="300" height="300"></canvas>
+  
+  <p id="progresoJuego" style="margin-top: 10px; font-weight: bold;"></p>
+
+<!-- 🎁 MODAL DE REGALO -->
+<div id="modalRegalo" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <h2>¡Felicidades mi amor! 🎉</h2>
+    <p>Este regalito es para ti 💖</p>
+<video id="videoRegalo" class="video-regalo" controls autoplay>
+  <source src="img/regalo3.mp4" type="video/mp4">
+  Tu navegador no soporta videos HTML5.
+</video>
+    <audio id="disneySound" src="audio/campana.mp3" preload="auto"></audio>
+    <div id="corazones"></div>
+  </div>
+</div>
+  <p>Intercambia dulces para formar líneas de 3 iguales.</p>
+  <div id="regaloFinal" class="oculto">
+    <h3>¡Sorpresa Final!</h3>
+<video id="videoRegalo" class="video-regalo" controls autoplay>
+  <source src="img/regalo3.mp4" type="video/mp4">
+  Tu navegador no soporta videos HTML5.
+</video>
+  </div>
+</section>
+
+<!-- PLAYLIST -->
+<section id="playlist" class="seccion">
+  <h2>Canciones Para Ti 🎶</h2>
+  <ul class="lista-canciones">
+    <li onclick="reproducirCancion('cancion1.mp3')"><strong>Te amo y mas</strong> – El libro de la vida</li>
+    <li onclick="reproducirCancion('cancion2.mp3')"><strong>Lauv</strong> – Steal the show</li>
+    <li onclick="reproducirCancion('cancion3.mp3')"><strong>Perfect</strong> – Ed Sheeran</li>
+    <li onclick="reproducirCancion('cancion4.mp3')"><strong>Die With A Smile</strong> – Lady Gaga, Bruno Mars</li>
+    <li onclick="reproducirCancion('cancion5.mp3')"><strong>Sabes Una Cosa</strong> – Luis Miguel</li>
+  </ul>
+  <audio id="player" controls style="margin-top: 1rem;"></audio>
+</section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
